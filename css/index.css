@@ -1,0 +1,241 @@
+/*estilos generalres*/
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html{
+overflow-y: scroll;
+scroll-snap-type: y mandatory;
+}
+div[id]{
+scroll-margin-top: 50px;
+}
+/*estilos del menu*/
+
+.nav{
+background-color: white;
+height: 50px;
+position: fixed;
+width: 100%;
+}
+.nav_container{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 90%;
+margin: 0 auto;
+}
+.nav_label, .nav_input{
+display: none;
+}
+.nav_menu{
+display: grid;
+grid-auto-flow: column;
+gap: 3em;
+}
+.nav_item{
+color: #b465da 90%;
+text-decoration: none;
+border-bottom: 2px solid transparent ;
+font-size: 2.6vh;
+font-weight: 500;
+font-family: 'Red Hat Display', sans-serif;
+}
+.nav_item:hover {
+color:color-mix(in srgb,#0ba360 0%, #3cba92 100%);
+border-bottom: 2px solid #3cba92 ;
+}
+
+
+/*estilo de las secciones*/
+.seccion{
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content:space-evenly;
+gap: 50px;
+scroll-snap-align: start;
+}
+
+.texto{
+display:flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+width: 46%;
+text-align: center;
+}
+.texto h2{
+font-size: 12vh;
+font-weight: 400;
+max-width: 650px;
+color: rgb(250, 243, 243);
+margin-bottom: 1%;
+font-family: 'Patua One', serif;
+}
+.texto p{
+margin-top: 20px;
+font-family: 'Red Hat Display', sans-serif;
+color: #2b2b29;
+font-weight: 300;
+font-size: 2.5vh;
+}
+.seccion img{
+height: 50vh;
+
+}
+
+.seccion-1 {
+background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
+}
+.seccion-2 {
+background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+
+}
+.seccion-3 {
+background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+
+}
+.seccion-4{
+background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+}
+
+.seccion-5{
+background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+
+}
+
+.seccion-6{
+background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+}
+
+/*responsive*/
+@media screen and (max-width: 450px) {
+    div[id]{
+        scroll-margin-top: 30px;
+        }
+.seccion{
+justify-content: center;
+display:flex;
+flex-direction: column;
+gap: 30px;
+}
+.seccion img {
+height: 30vh!important;  
+width: 40vh !important;
+}
+.nav{
+    height: 30px;
+}
+.nav_label{
+    display: block;
+    cursor: pointer;
+    }
+    .nav_menu{
+        border: 0;
+        position: fixed;
+        top: 30px;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 1s ease-out;
+        gap: 2rem;
+        padding-bottom: 1rem;
+        }
+        
+        .nav_input:checked ~ .nav_menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        } 
+.texto{
+width: 90%;
+}
+
+.texto h2 {
+font-size: 8vh !important; 
+}
+
+.texto p {
+font-size: 2.2vh !important; 
+}
+}
+@media screen and (min-width: 450px) and (max-width: 619px ) {
+.seccion{
+justify-content: center;
+display:flex;
+flex-direction: column;
+gap: 10px;
+}
+div[id]{
+    scroll-margin-top: 30px;
+    }
+.nav{
+height: 30px;
+}
+.nav_label{
+display: block;
+cursor: pointer;
+}
+.texto{
+width: 90%;
+}
+
+.nav_menu{
+border: 0;
+position: fixed;
+top: 30px;
+background-color: white;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+transition: clip-path 1s ease-out;
+gap: 2rem;
+padding-bottom: 1rem;
+}
+
+.nav_input:checked ~ .nav_menu{
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+} 
+
+.texto h2{
+font-size: 6vh;
+}
+.texto p{
+font-size: 2.4vh;
+}
+.seccion img{
+width: 60vh;
+}     
+}
+@media screen and (min-width:620px) and (max-width: 800px ) {
+.seccion{
+justify-content: center;
+display:flex;
+flex-direction: column;
+gap: 10px;
+}
+div[id]{
+scroll-margin-top: 20px;
+}
+.texto{
+width: 90%;    
+}
+.texto h2{
+font-size: 10vh;
+}
+.texto p{
+font-size: 2.5vh;
+}
+.seccion img{
+margin-top: 10px;
+}
+}
